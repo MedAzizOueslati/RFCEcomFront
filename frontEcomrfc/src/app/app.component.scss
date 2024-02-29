@@ -1,0 +1,35 @@
+/* Add this CSS to your styles.css or component-specific CSS file */
+
+.navbar {
+  background-color: #2196f3; /* Primary color */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px; /* Adjust padding as needed */
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.text-blue {
+  color: #2f89d2;
+  text-decoration: none; /* Remove underlines */
+  transition: color 0.3s ease; /* Add a smooth color transition */
+}
+
+.text-blue:hover {
+  color: #1565c0; /* Darker shade on hover */
+}
+
+.active {
+  border-bottom: 2px solid #fff;
+}
