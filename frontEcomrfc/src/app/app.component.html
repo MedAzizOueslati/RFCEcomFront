@@ -1,19 +1,110 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<mat-toolbar color="text-blue" class="navbar">
+<div *ngIf="!isClientLoggedIn && !isAdminLoggedIn ">
 
-  <span class="navbar-brand">E-Commerce</span>
-  <span class="flex-grow"></span>
-  <button mat-button routerLink="/order" routerLinkActive="active" class="text-blue">Track Order</button>
-  <button mat-button routerLink="/signup" rouuterLinkActive="active" class="text-blue">Register</button>
-  <button mat-button routerLink="/login" routerLinkActive="active" class="text-blue">Login</button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <img src="/assets/images/items/ma1.png" class="img-fluid" alt="Logo" width="80px" height="auto">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          
+        </ul>
+    
+        <form class="d-flex"  >
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+        </div>
+      <button mat-button routerLink="/order" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Order </button>
+      <button mat-button routerLink="/signup" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Register </button>
+      <button mat-button routerLink="/login" routerLinkActive="active" class="text-blue"><i class="fa fa-user"></i>Login</button>
+      
+      </nav>
 
-</mat-toolbar>
+</div>
+ <!--end no login*.// -->
+
+ <div *ngIf="isAdminLoggedIn ">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <img src="/assets/images/items/ma1.png" class="img-fluid" alt="Logo" width="80px" height="auto">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          
+        </ul>
+    
+        <form class="d-flex"  >
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+        </div>      
+
+      <button mat-button routerLink="/admin/dashboard" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Dashboard </button>
+      <button mat-button routerLink="/admin/analytics" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Analytics </button>
+      <button mat-button routerLink="/admin/category" routerLinkActive="active" class="text-blue"><i class="fa fa-user"></i>Category</button>
+      <button mat-button routerLink="/admin/product" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Product </button>
+      <button mat-button routerLink="/admin/orders" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Orders </button>
+      <button mat-button routerLink="/admin/post-coupons" routerLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Post Coupon</button>
+      <button mat-button routerLink="/admin/Coupons" routerLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Coupons</button>
+      <button mat-button  routerLinkActive="active" (click)="logOut()" class="text-blue"><i class="fa fa-user"></i>Logout</button>
+      </nav>
+
+</div>
+<!--end admin logged-->
+
+<div *ngIf="isClientLoggedIn ">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <img src="/assets/images/items/ma1.png" class="img-fluid" alt="Logo" width="80px" height="auto">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          
+        </ul>
+    
+        <form class="d-flex"  >
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
+        </div>
+        <button mat-button routerLink="/customer/dashboard" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Dashboard </button>
+        <button mat-button routerLink="/customer/cart" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Cart </button>
+      <button mat-button routerLink="/customer/my_orders" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Orders </button>
+      <button mat-button routerLink="/customer/whishlist" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Wishlist </button>
+      <button mat-button routerLink="/customer/profile" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Profile </button>
+      <button mat-button  routerLinkActive="active" (click)="logOut()" class="text-blue"><i class="fa fa-user"></i>Logout</button>
+      
+      </nav>
+
+</div>
+<!--end client logged-->
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
+
+<app-home></app-home>

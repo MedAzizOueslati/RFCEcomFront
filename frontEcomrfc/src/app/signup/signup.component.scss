@@ -4,6 +4,10 @@
   align-items: center;
   height: 100vh;
   background: linear-gradient(to right, #3498db, #2c3e50);
+  background-image: url('/assets/images/items/Cover2.png') ;
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  background-repeat: no-repeat;
 }
 
 mat-card {

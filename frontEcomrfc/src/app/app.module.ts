@@ -9,12 +9,20 @@ import { DemoAngularMaterailModule } from './DemoAngularMaterialModule';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { ShopComponent } from './shop/shop.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    HeaderComponent,
+    FooterComponent,
+    ShopComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     DemoAngularMaterailModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
