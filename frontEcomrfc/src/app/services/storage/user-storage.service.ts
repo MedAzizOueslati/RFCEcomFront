@@ -16,11 +16,11 @@ export class UserStorageService {
   }
   public saveUser (user : string) :void{
     window.localStorage.removeItem(USER);
-    window.localStorage.setItem(USER,JSON.stringify(user));
+    window.localStorage.setItem(USER,user);
   }
 
   static getToken():string {
-    return JSON.parse( localStorage.getItem(TOKEN));
+    return localStorage.getItem(TOKEN);
   }
   static getUser():any {
     return JSON.parse( localStorage.getItem(USER));
@@ -40,15 +40,16 @@ export class UserStorageService {
     }
     return user.role;
   }
+
   static isAdminLoggedIn():boolean{
-    if(this.getToken == null){
+    if(this.getToken === null){
       return false;
     }
     const role: string = this.getUserRole();
     return role == 'ADMIN';
   }
   static isClientLoggedIn():boolean{
-    if(this.getToken == null){
+    if(this.getToken === null){
       return false;
     }
     const role: string = this.getUserRole();

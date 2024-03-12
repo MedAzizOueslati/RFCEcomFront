@@ -40,7 +40,7 @@ export class LoginComponent {
         }
         else if (UserStorageService.isClientLoggedIn()){
           this.snackBar.open('Login Success ', 'Ok', { duration: 5000 });
-          this.router.navigateByUrl('customer/dashboard');
+          this.router.navigateByUrl('customers/dashboard');
         
         }
         (error) => {
