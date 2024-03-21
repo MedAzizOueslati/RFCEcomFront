@@ -1,0 +1,113 @@
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+
+
+// Custom SCSS for a modern and stylish interface with a smaller form
+.container {
+  max-width: 400px;
+  max-width: max-content;
+  margin: auto;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+
+  .file-upload-container {
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 10px;
+      border: 2px dashed #007bff;
+      border-radius: 8px;
+      color: #007bff;
+      transition: background-color 0.3s;
+      margin-bottom: 2%;
+
+      mat-icon {
+        font-size: 22px;
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background-color: rgba(0, 123, 255, 0.1);
+      }
+    }
+
+    .image-preview {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+
+      .circle-image {
+        border-radius: 50%;
+        overflow: hidden;
+        width: 80px; // Adjust the width and height based on your preference
+        height: 80px;
+        margin: 0 auto;
+        background-color: #fff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+        .preview-image {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .form-field {
+    width: 100%;
+    margin-bottom: 10px; // Adjust the margin based on your preference
+
+    mat-label {
+      font-size: 14px;
+      color: #495057;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ced4da;
+      font-size: 14px;
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: #007bff;
+      }
+    }
+
+    .mat-error {
+      font-size: 12px;
+      color: #dc3545;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

@@ -18,6 +18,31 @@ export class AdminService {
       headers: this.createAuthorizationHeader(),
     })
   }
+  getAllCategories():Observable<any>{
+    return this.http.get(BASIC_URL + 'admin/allCategory',{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+  addProduct(productDto:any):Observable<any>{
+    return this.http.post(BASIC_URL + 'admin/product', productDto,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+  getAllProducts():Observable<any>{
+    return this.http.get(BASIC_URL + 'admin/products',{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+  getAllProductsByName(name:any):Observable<any>{
+    return this.http.get(BASIC_URL + `admin/search/${name}`,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+  deleteProduct(productId:any):Observable<any>{
+    return this.http.delete(BASIC_URL + `admin/product/${productId}`,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
 
   private createAuthorizationHeader() : HttpHeaders {
     return new HttpHeaders().set(
