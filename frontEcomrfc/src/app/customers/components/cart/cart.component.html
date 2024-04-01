@@ -1,3 +1,7 @@
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+
 <div class="cart-container">
     <div *ngIf="cartItems.length > 0; else emptyCart">
       <div class="cart-item" *ngFor="let item of cartItems">
@@ -13,11 +17,11 @@
                   </div>
                   <div class="item-price">{{ item.price | currency }}</div>
                   <div class="quantity-controls">
-                    <button mat-icon-button [disabled]="item.quantity == 1">
+                    <button mat-icon-button [disabled]="item.quantity == 1" (click)="decreaseQuantity(item.productId)" >
                       <mat-icon>remove_circle_outline</mat-icon>
                     </button>
                     <span class="quantity">{{ item.quantity }}</span>
-                    <button mat-icon-button >
+                    <button mat-icon-button (click)="increaseQuantity(item.productId)" >
                       <mat-icon>add_circle_outline</mat-icon>
                     </button>
                  
@@ -25,6 +29,8 @@
                 </div>
               </div>
             </div>
+            <mat-divider></mat-divider>
+
             <div class="total-price">
                 Total Amount: {{ order.totalAmount | currency }}
               </div>
@@ -32,7 +38,7 @@
                 Amount: {{ order.amount | currency }}
               </div>
               <div>
-                <button mat-raised-button color="primary">Place Order</button>
+                <button mat-raised-button color="primary" (click)="placeOrder()">Place Order</button>
               </div>
               
           </div>

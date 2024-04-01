@@ -1,0 +1,34 @@
+<mat-card class="order-card">
+    <mat-card-header class="order-header">
+      <mat-card-title class="order-title">Place Your Order</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="order-content">
+      <form [formGroup]="orderForm" class="order-form">
+        <div class="custom-input">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label class="input-label">Delivery Address</mat-label>
+            <input matInput formControlName="address" placeholder="Enter your address" required>
+            <mat-icon matSuffix class="input-icon">location_on</mat-icon>
+            <mat-error *ngIf="orderForm.get('address')?.invalid && orderForm.get('address')?.touched">
+                Address is required!
+              </mat-error>
+              
+          </mat-form-field>
+        </div>
+  
+        <div class="custom-input">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label class="input-label">Order Description</mat-label>
+            <textarea matInput formControlName="orderDescription" placeholder="Describe your order" rows="5"></textarea>
+            <mat-icon matSuffix class="input-icon">description</mat-icon>
+          </mat-form-field>
+        </div>
+  
+        <div class="button-row">
+          <button mat-raised-button color="primary" type="submit" [disabled]="orderForm.invalid" (click)="placeOrder()" class="order-button">Place Order</button>
+          <button mat-stroked-button color="warn" (click)="closeForm()" class="close-button">Close</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
