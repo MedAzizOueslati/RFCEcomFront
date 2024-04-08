@@ -31,14 +31,53 @@ export class CustomerService {
       headers: this.createAuthorizationHeader(),
     })
   }
+  increaseQuantity(productId:any):Observable<any>{
+    const cartDto = {
+      productId : productId,
+      userId: UserStorageService.getUserId()
+    }
+    return this.http.post(BASIC_URL + 'customer/addition',cartDto,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+  decreaseQuantity(productId:any):Observable<any>{
+    const cartDto = {
+      productId : productId,
+      userId: UserStorageService.getUserId()
+    }
+    return this.http.post(BASIC_URL + 'customer/decrease',cartDto,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
 
   getCartByUserId():Observable<any>{
     const userId = UserStorageService.getUserId()
     
-    return this.http.post(BASIC_URL + 'customer/cart/${userId}',{
+    return this.http.get(BASIC_URL + `customer/cart/${userId}`,{
       headers: this.createAuthorizationHeader(),
     })
   }
+
+  placeOrder(orderDto: any): Observable<any> {
+    orderDto.userId = UserStorageService.getUserId();
+    
+    // Assuming createAuthorizationHeader() returns HttpHeaders
+    const headers = this.createAuthorizationHeader();
+  
+    // Send the orderDto as the request body and provide headers separately
+    return this.http.post(BASIC_URL + 'customer/placeOrder', orderDto, { headers });
+  }
+
+  getOrdersByUserId(): Observable<any> {
+    const userId = UserStorageService.getUserId();
+    
+    // Assuming createAuthorizationHeader() returns HttpHeaders
+    const headers = this.createAuthorizationHeader();
+  
+    // Send the orderDto as the request body and provide headers separately
+    return this.http.get(BASIC_URL + `customer/myOrders/${userId}`,  { headers });
+  }
+  
 
   private createAuthorizationHeader() : HttpHeaders {
     return new HttpHeaders().set(

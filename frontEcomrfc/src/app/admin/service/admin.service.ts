@@ -43,6 +43,17 @@ export class AdminService {
       headers: this.createAuthorizationHeader(),
     })
   }
+  getPlacedOrders():Observable<any>{
+    return this.http.get(BASIC_URL + 'admin/placedOrders',{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+
+  changeOrderStatus(orderId : number , status : string):Observable<any>{
+    return this.http.get(BASIC_URL + `admin/order/${orderId}/${status}`,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
 
   private createAuthorizationHeader() : HttpHeaders {
     return new HttpHeaders().set(
