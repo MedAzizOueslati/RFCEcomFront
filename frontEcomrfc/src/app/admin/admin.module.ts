@@ -10,6 +10,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PostCategoryComponent } from './components/post-category/post-category.component';
 import { PostProductComponent } from './components/post-product/post-product.component';
 import { OrdersComponent } from './components/orders/orders.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { OrdersComponent } from './components/orders/orders.component';
     DashboardComponent,
     PostCategoryComponent,
     PostProductComponent,
-    OrdersComponent
+    OrdersComponent,
+    UpdateProductComponent
   ],
   imports: [
     CommonModule,

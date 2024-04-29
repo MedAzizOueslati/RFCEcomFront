@@ -28,6 +28,11 @@ export class AdminService {
       headers: this.createAuthorizationHeader(),
     })
   }
+  updateProduct(productId:any,productDto:any):Observable<any>{
+    return this.http.put(BASIC_URL + `admin/product/${productId}`, productDto,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
   getAllProducts():Observable<any>{
     return this.http.get(BASIC_URL + 'admin/products',{
       headers: this.createAuthorizationHeader(),
@@ -51,6 +56,11 @@ export class AdminService {
 
   changeOrderStatus(orderId : number , status : string):Observable<any>{
     return this.http.get(BASIC_URL + `admin/order/${orderId}/${status}`,{
+      headers: this.createAuthorizationHeader(),
+    })
+  }
+  getAllProductById(productId):Observable<any>{
+    return this.http.get(BASIC_URL + `admin/product/${productId}`,{
       headers: this.createAuthorizationHeader(),
     })
   }

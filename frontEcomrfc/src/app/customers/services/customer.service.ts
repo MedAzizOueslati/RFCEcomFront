@@ -77,8 +77,26 @@ export class CustomerService {
     // Send the orderDto as the request body and provide headers separately
     return this.http.get(BASIC_URL + `customer/myOrders/${userId}`,  { headers });
   }
-  
+  getOrderedProducts(orderId:number): Observable<any> {
 
+    // Send the orderDto as the request body and provide headers separately
+    return this.http.get(BASIC_URL + `customer/ordered-products/${orderId}`,  {
+       headers : this.createAuthorizationHeader() ,
+      });
+  }
+
+  giveReview(reviewDto:any): Observable<any> {
+
+    
+      
+      // Assuming createAuthorizationHeader() returns HttpHeaders
+      const headers = this.createAuthorizationHeader();
+    
+      // Send the orderDto as the request body and provide headers separately
+      return this.http.post(BASIC_URL + 'customer/review', reviewDto, { headers });
+  
+  }
+  
   private createAuthorizationHeader() : HttpHeaders {
     return new HttpHeaders().set(
       'Authorization' , 'Bearer' + UserStorageService.getToken()

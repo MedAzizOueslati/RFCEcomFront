@@ -1,0 +1,248 @@
+/* Overall Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right, #f0f0f0, #e0e0e0 80%);
+  }
+  
+  .review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+  }
+  
+  /* File Upload Container (Optional) */
+  /* Modify based on your design preference */
+  
+  /* Rating Selection */
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .mat-select {
+    display: none; /* Hide default select */
+  }
+  
+  .rating-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .rating-star {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    fill: #ccc; /* Unselected icon color */
+    transition: fill 0.2s ease-in-out;
+  }
+  
+  .rating-star:hover {
+    fill: blue; /* Hover icon color */
+  }
+  
+  .rating-star.selected {
+    fill: black; /* Selected icon color */
+  }
+  
+  /* Description Text Area */
+  .mat-input {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    font-family: inherit;
+  }
+  
+  .mat-input::placeholder {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0.6;
+  }
+  
+  .mat-input:focus + .mat-form-field-label-wrapper .mat-form-field-label {
+    opacity: 1;
+    font-size: 0.8rem; /* Adjust label font size on focus */
+    font-weight: bold;
+    color: #333;
+    transform: translateY(-10px); /* Move label up on focus */
+  }
+  
+  .mat-input:focus {
+    outline: none;
+    border-color: blue;
+     /* Focus border color */
+  }
+  
+  .mat-input:focus::placeholder {
+    opacity: 0;
+  }
+  
+  .character-count {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  /* Submit Button */
+  .mat-raised-button {
+    background: linear-gradient(to right, blue 0%, black 100%);
+    color: #ffff;
+}
+    /* Overall Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0 80%);
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+/* File Upload Container (Optional) */
+/* Modify based on your design preference */
+
+/* Rating Selection */
+.mat-form-field {
+  width: 100%;
+}
+
+.mat-select {
+  display: none; /* Hide default select */
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-star {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  fill: #ccc; /* Unselected icon color */
+  transition: fill 0.2s ease-in-out;
+}
+
+.rating-star:hover {
+  fill: yellow; /* Hover icon color */
+}
+
+.rating-star.selected {
+  fill: blue; /* Selected icon color */
+}
+
+/* Description Text Area */
+.mat-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-family: inherit;
+}
+
+.mat-input::placeholder {
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0.6;
+}
+
+.mat-input:focus + .mat-form-field-label-wrapper .mat-form-field-label {
+  opacity: 1;
+  font-size: 0.8rem; /* Adjust label font size on focus */
+  font-weight: bold;
+  color: #333;
+  transform: translateY(-10px); /* Move label up on focus */
+}
+
+.mat-input:focus {
+  outline: none;
+  border-color: black; /* Focus border color */
+}
+
+.mat-input:focus::placeholder {
+  opacity: 0;
+}
+
+.character-count {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Submit Button */
+.mat-raised-button {
+  background: linear-gradient(to right, blue 0%, black 100%);
+  color: #fff;
+  /* Submit Button Continued */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mat-raised-button:hover {
+  background: linear-gradient(to right, black 0%, black 100%);
+  transform: scale(1.02); /* Slight button growth on hover */
+}
+
+/* Progress Bar (Optional) */
+.progress-bar {
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  width: 0%; /* Initial progress */
+  height: 100%;
+  background-color: blue; /* Adjust to match submit button */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Social Sharing Buttons (Optional) */
+.social-sharing {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.social-sharing a {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-sharing a:hover {
+  transform: translateY(-2px); /* Slight bounce on hover */
+}
+
+.social-sharing a.facebook {
+  background-color: #3b5998;
+}
+
+.social-sharing a.twitter {
+  background-color: #00aced;
+}
+  
