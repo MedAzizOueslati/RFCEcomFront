@@ -27,7 +27,6 @@ export class ReviewComponent {
     this.reviewForm = this.fb.group({
       rating: [null,[Validators.required]],
       description: [null,[Validators.required]],
-
   })
 }
 onFileSelected(event:any){

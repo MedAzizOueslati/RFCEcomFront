@@ -1,66 +1,57 @@
+.background {
+  background-color: #f0f0f0; /* Background color */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .order-card {
-  width: 400px;
-  margin: 50px auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #f5f5f5;
+  max-width: 400px; /* Max width for the card */
+  width: 100%;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 
 .order-header {
-  background-color: #2196f3;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background-color: #1976d2; /* Header background color */
 }
 
 .order-title {
-  color: #fff;
-  font-size: 24px;
+  color: #fff; /* Title color */
 }
 
 .order-content {
-  padding: 20px;
+  padding: 20px; /* Padding inside the card content */
 }
 
 .custom-input {
-  margin-bottom: 20px;
-}
-
-.form-field {
-  width: 100%;
+  margin-bottom: 20px; /* Spacing between input fields */
 }
 
 .input-label {
-  color: #333;
-  font-weight: bold;
+  color: #555; /* Label color */
 }
 
 .input-icon {
-  color: #666;
+  color: #aaa; /* Icon color */
 }
 
 .button-row {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: space-between; /* Space between buttons */
+}
+
+.order-button,
+.close-button {
+  width: 48%; /* Equal width for buttons */
 }
 
 .order-button {
-  width: 150px;
+  background-color: #4caf50; /* Primary button color */
 }
 
 .close-button {
-  width: 150px;
-}
-
-.order-button, .close-button {
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.order-button:hover, .close-button:hover {
-  transform: translateY(-2px);
-}
-
-.order-button:active, .close-button:active {
-  transform: translateY(1px);
+  border-color: #f44336; /* Close button border color */
+  color: #f44336; /* Close button text color */
 }

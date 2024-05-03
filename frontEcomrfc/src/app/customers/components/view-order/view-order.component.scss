@@ -1,108 +1,87 @@
-/* Style général */
+.background {
+  background: url('/assets/images/ecom.jpg') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-color: #87CEEB; /* Couleur bleu ciel */
+  height: 100vh;
+}
+.background {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
 .ordered-product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  /* Style du conteneur de chaque produit */
-  .ordered-product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    margin: 0 20px 20px 0;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  /* Effet de survol */
-  .ordered-product:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Style de l'image du produit */
-  .product-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-  }
-  
-  /* Style des détails du produit */
-  .product-details {
-    width: 100%;
-    text-align: center;
-  }
-  
-  /* Style du nom du produit */
-  .item-name {
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  /* Style du prix du produit */
-  .item-price {
-    font-size: 16px;
-    color: #777;
-    margin-bottom: 5px;
-  }
-  
-  /* Style de la quantité du produit */
-  .item-quantity {
-    font-size: 14px;
-    color: #777;
-  }
-  
-  /* Style des boutons d'action */
-  .action-buttons {
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  .action-buttons button {
-    width: 100%;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .action-buttons button:hover {
-    background-color: #0056b3;
-  }
-/* Style du prix total */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+*th{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-style: italic;
+}
+*td{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.ordered-product {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.ordered-product:hover {
+  transform: translateY(-5px);
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-details {
+  flex: 1;
+  padding-left: 15px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.item-price,
+.item-quantity {
+  color: #666;
+}
+
+.action-buttons {
+  margin-top: 10px;
+}
+
 .total-price {
-    width: 100%;
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    margin-top: 40px;
-    color: #fff;
-    background-color: #007bff86; /* Fond bleu vif */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    font-family: 'Montserrat', sans-serif; /* Utilisation de la police Montserrat */
-  }
-  
-  /* Effet de survol */
-  .total-price:hover {
-    transform: translateY(-5px);
-    background-color: #0057b3; /* Légèrement plus foncé au survol */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Légère augmentation de l'ombre au survol */
-  }
-  
-  
-  
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}

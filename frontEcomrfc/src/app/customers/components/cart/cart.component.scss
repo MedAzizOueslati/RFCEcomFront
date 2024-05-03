@@ -1,148 +1,94 @@
-/* Overall Cart Container */
-.cart-container {
-    background: linear-gradient(to right, #f2f2f2, #e0e0e0); /* Subtle horizontal gradient */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 0 auto; /* Center the cart horizontally */
-    max-width: 800px; /* Set a maximum width for responsiveness */
-  }
-  
-  /* Empty Cart Message */
-  .empty-cart-message {
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
-    color: #999; /* Light gray for the message text */
-    margin-top: 20px;
-  }
-  
-  /* Cart Item Styling */
-  .cart-item {
-    background-color: #fff; /* White background for each item */
-    margin-bottom: 15px;
-    border-radius: 5px; /* Rounded corners for individual items */
-    display: flex; /* Flexbox layout for product info and total price */
-  }
-  
-  .cart-content {
-    flex: 1; /* Take up remaining space after product image */
-    padding: 15px;
-  }
-  
-  /* Product Image */
-  .product-image img {
-    width: 100px; /* Set image width */
-    height: 100px; /* Set image height */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    border-radius: 5px; /* Rounded corners for product images */
-  }
-  
-  /* Product Details */
-  .product-details {
-    margin-left: 15px; /* Spacing between image and details */
-  }
-  
-  
-  .item-row {
-    display: flex; /* Flexbox layout for product name, price, and quantity */
-    justify-content: space-between; /* Align items horizontally */
-    align-items: center; /* Align items vertically */
-  }
-  
-  .item {
-    font-size: 16px; /* Product name font size */
-    font-weight: 500; /* Slightly bolder for product name */
-    color: #333; /* Darker gray for readability */
-    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
-  }
-  
-  .item-price {
-    font-size: 14px;
-    color: #333; /* Darker gray for readability */
-    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
-  }
-  
-  /* Quantity Controls */
-  .quantity-controls {
-    display: flex;
-    align-items: center;
-  }
-  
-  .quantity-controls button {
-    background: none; /* Remove default button styling */
-    border: none; /* Remove default button border */
-    padding: 5px; /* Adjust padding as needed */
-    cursor: pointer; /* Indicate interaction on hover */
-  }
-  
-  .quantity-controls button:hover {
-    opacity: 0.8; /* Slight opacity change on hover */
-  }
-  
-  .quantity {
-    font-size: 14px;
-    margin: 0 5px; /* Spacing between buttons and quantity */
-    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
-  }
-  
-  /* Total Price */
-  .total-price {
-    margin-top: 10px; /* Spacing above total price */
-    font-size: 14px;
-    font-weight: bold;
-    color: #333; /* Darker gray for readability */
-    font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
-  }
-  
-  /* Place Order Button */
-  .cart-container button {
-    color: #3308f3; /* White text */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Indicate interaction on hover */
-    font-size: 16px;
-    margin-top: 15px; /* Spacing above button */
-
-    transition: all 0.2s ease-in-out; /* Smooth transition on hover */
-  font-family: 'Montserrat', sans-serif; /* Modern sans-serif font */
+.background {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
 }
-
-
-
-/* Add a subtle border to the top of the cart container for separation */
-.cart-container:before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #ddd;
-  margin-top: -20px; /* Position the border above the container */
-}
-
-/* Product Name Highlight (if applicable) */
-.item.highlight {
-  color: #f2f3f9; /* Change highlight color to match button */
-}
-
-/* Empty Cart Message Illustration (optional) */
-.empty-cart-message:after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin: 10px auto; /* Center the illustration below the message */
+.background {
+  background: url('/assets/images/ecom.jpg') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
   background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #87CEEB; /* Couleur bleu ciel */
+  height: 100vh;
 }
 
-/* Micro-Animations (optional) */
-.cart-item:hover {
-  transform: translateY(-2px); /* Subtle upward movement on hover */
-  transition: transform 0.2s ease-in-out;
+.cart-container {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
 }
 
-.cart-container button:hover {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+.cart-item {
+  margin-bottom: 10px;
+}
+
+.cart-content {
+  display: flex;
+  align-items: center;
+}
+
+.product-image img {
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-details {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.item {
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-style: italic;
+}
+
+.item-price {
+  padding-inline-start: 15%;
+  font-size: 14px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style:normal;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.quantity {
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.total-amount,
+.amount {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.place-order-btn {
+  margin-top: 20px;
+  width: 100%;
 }
