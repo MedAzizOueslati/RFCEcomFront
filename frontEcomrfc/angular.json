@@ -48,6 +48,11 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
+                {
+                  "type": "css",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
               ],
               "outputHashing": "all"
             },
