@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "publish": "npm publish"
+  },
+    "repository": {
+    "type": "npm",
+    "url": "https://localhost:8081/npm-group"
   },
   "private": true,
   "dependencies": {
