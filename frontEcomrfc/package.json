@@ -11,7 +11,7 @@
   },
     "repository": {
     "type": "npm",
-    "url": "http://localhost:8081/npm-group"
+    "url": "http://localhost:8081/npm-hosted"
   },
   "private": true,
   "dependencies": {
