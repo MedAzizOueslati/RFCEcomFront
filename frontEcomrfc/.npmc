@@ -1,11 +1,11 @@
-registry=http://localhost:8081/repository/npm-hosted/
+registry=http://localhost:8081/repository/npm-group/
 
 
 
-http://localhost:8081/repository/npm-hosted/:_auth=admin:aziz
-http://localhost:8081/repository/npm-hosted/:username=admin
-http://localhost:8081/repository/npm-hosted/:_password=aziz
-http://localhost:8081/repository/npm-hosted/:email=medazizslt@gmaili.com
-http://localhost:8081/repository/npm-hosted/:always-auth=true
+http://localhost:8081/repository/npm-group/:_auth=admin:aziz
+http://localhost:8081/repository/npm-group/:username=admin
+http://localhost:8081/repository/npm-group/:_password=aziz
+http://localhost:8081/repository/npm-group/:email=medazizslt@gmaili.com
+http://localhost:8081/repository/npm-group/:always-auth=true
 
 
