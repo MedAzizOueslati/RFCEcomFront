@@ -1,6 +1,10 @@
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap";
-
+.background {
+  background-size:  200%;
+  background-color: #87cfeb62; /* Couleur bleu ciel */
+  height: 200%;
+}
 
 
 // Custom SCSS for a modern and stylish interface with a smaller form

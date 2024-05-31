@@ -1,53 +1,61 @@
-/* Utilisation de polices Google */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-/* Corps de la page */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa; /* Couleur de fond */
-    color: #333; /* Couleur du texte */
-}
-
-/* Style du tableau */
-.mat-elevation-28 {
-    width: 100%;
-    margin-top: 20px;
-    border: 1px solid #dee2e6; /* Bordure du tableau */
-    border-radius: 0.25rem; /* Coins arrondis */
-    background-color: #fff; /* Couleur de fond */
-}
-
-/* En-têtes de colonnes */
-.mat-elevation-28 th {
+.background {
+    background: url('/assets/images/ecom.jpg') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-color: #87CEEB; /* Couleur bleu ciel */
+    height: 100vh;
+  }
+.background {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .mat-elevation-28 {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    padding: 12px 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .mat-header-cell {
     font-weight: bold;
-    color: #003973; /* Couleur du texte pour les en-têtes */
-    background-color: #f8f9fa; /* Couleur de fond */
-    border-bottom: 2px solid #dee2e6; /* Bordure inférieure */
-}
-
-/* Cellules */
-.mat-elevation-28 td {
-    padding: 12px 10px;
-    border-bottom: 1px solid #dee2e6; /* Bordure inférieure */
-}
-
-/* Boutons */
-.mat-elevation-28 button {
-    padding: 8px 16px;
-    border-radius: 5px;
+    color: #003973;
+  }
+  
+  .mat-cell {
+    color: #333;
+  }
+  
+  .mat-header-row {
+    background-color: #e0e0e0;
+  }
+  
+  .mat-row:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .mat-row:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .mat-row,
+  .mat-header-row {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  button {
     font-weight: bold;
-    cursor: pointer;
-    color: #fff; /* Couleur du texte */
-}
-
-.mat-elevation-28 button:hover {
-    background-color: #007bff; /* Couleur de fond au survol */
-}
-
-.mat-elevation-28 button:focus {
-    outline: none;
-}
-
-.mat-elevation-28 button:active {
-    transform: translateY(1px);
-}
+  }
+  
+  .mat-raised-button {
+    background-color: #2196f3;
+    color: #fff;
+  }
+  
+  .mat-raised-button:hover {
+    background-color: #0d47a1;
+  }
+  

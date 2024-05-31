@@ -52,14 +52,14 @@
         </div>
         </div>      
 
-      <button mat-button routerLink="/admin/dashboard" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Dashboard </button>
+      <button mat-button routerLink="/admin/dashboard" routerLinkActive="active" class="text-blue"> <i class="fas fa-store-alt"></i>Dashboard </button>
    <!--   <button mat-button routerLink="/admin/analytics" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Analytics </button> -->
-      <button mat-button routerLink="/admin/category" routerLinkActive="active" class="text-blue"><i class="fa fa-user"></i>Category</button>
-      <button mat-button routerLink="/admin/product" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Product </button>
+      <button mat-button routerLink="/admin/category" routerLinkActive="active" class="text-blue"><i class="fas fa-folder"></i>Category</button>
+      <button mat-button routerLink="/admin/product" routerLinkActive="active" class="text-blue"> <i class="fas fa-shopping-bag"></i>Product </button>
       <button mat-button routerLink="/admin/orders" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Orders </button>
    <!--<button mat-button routerLink="/admin/post-coupons" routerLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Post Coupon</button>
       <button mat-button routerLink="/admin/Coupons" routerLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Coupons</button>  -->   
-      <button mat-button  routerLinkActive="active" (click)="logOut()" class="text-blue"><i class="fa fa-user"></i>Logout</button>
+      <button mat-button  routerLinkActive="active" (click)="logOut()" class="text-blue"><i class="fas fa-sign-out-alt"></i>Logout</button>
       </nav>
 
 </div>
@@ -87,12 +87,11 @@
         </form>
         </div>
         </div>
-        <button mat-button routerLink="/customers/dashboard" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Dashboard </button>
-        <button mat-button routerLink="/customers/cart" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Cart </button>
-      <button mat-button routerLink="/customers/my_orders" routerLinkActive="active" class="text-blue"> <i class="fa fa-shopping-cart"></i>Orders </button>
-      <button mat-button routerLink="/customers/whishlist" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Wishlist </button>
-      <button mat-button routerLink="/customers/profile" rouuterLinkActive="active" class="text-blue"><i class="fas fa-user-plus"></i>Profile </button>
-      <button mat-button  routerLinkActive="active" (click)="logOut()" class="text-blue"><i class="fa fa-user"></i>Logout</button>
+        <button mat-button routerLink="/customers/dashboard" routerLinkActive="active" class="text-blue"> <i class="fas fa-store-alt"></i>Dashboard </button>
+        <button mat-button routerLink="/customers/cart" rouuterLinkActive="active" class="text-blue"><i class="fa fa-shopping-cart"></i>Cart </button>
+      <button mat-button routerLink="/customers/my_orders" routerLinkActive="active" class="text-blue"> <i class="fas fa-shopping-bag"></i>Orders </button>
+      <button mat-button routerLink="/customers/wishlist" rouuterLinkActive="active" class="text-blue"><i class="fas fa-heart"></i>Wishlist </button>
+      <button mat-button  routerLinkActive="active" (click)="logOut()" class="text-blue"><i class="fas fa-sign-out-alt"></i>Logout</button>
       
       </nav>
 
@@ -107,3 +106,4 @@
 
 <router-outlet></router-outlet>
 
+<app-footer></app-footer>

@@ -1,6 +1,11 @@
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap";
-
+.background {
+  background: url('/assets/images/ecom.jpg') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-color: #87CEEB; /* Couleur bleu ciel */
+  height: 150vh;
+}
 
 
 // Custom SCSS for a modern and stylish interface with a smaller form
@@ -9,7 +14,7 @@
   max-width: max-content;
   margin: auto;
   padding: 15px;
-  background-color: #f8f9fa;
+  background-color: #f8f9fad7;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 

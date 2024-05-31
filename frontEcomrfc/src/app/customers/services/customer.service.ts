@@ -96,6 +96,39 @@ export class CustomerService {
       return this.http.post(BASIC_URL + 'customer/review', reviewDto, { headers });
   
   }
+
+  getProductDetailById(productId: number): Observable<any> {
+
+    // Send the orderDto as the request body and provide headers separately
+    return this.http.get(BASIC_URL + `customer/product/${productId}`,  {
+       headers : this.createAuthorizationHeader() ,
+      });
+  }
+
+  addProductToWishlist(wishlistDto:any): Observable<any> {
+
+    
+      
+    // Assuming createAuthorizationHeader() returns HttpHeaders
+    const headers = this.createAuthorizationHeader();
+  
+    // Send the orderDto as the request body and provide headers separately
+    return this.http.post(BASIC_URL + 'customer/wishlist', wishlistDto, { headers });
+
+}
+getWishlistByUserId(): Observable<any> {
+
+    const userId = UserStorageService.getUserId();
+
+      
+  // Assuming createAuthorizationHeader() returns HttpHeaders
+  const headers = this.createAuthorizationHeader();
+
+  // Send the orderDto as the request body and provide headers separately
+  return this.http.get(BASIC_URL + `customer/wishlist/${userId}`,  { headers });
+
+}
+
   
   private createAuthorizationHeader() : HttpHeaders {
     return new HttpHeaders().set(

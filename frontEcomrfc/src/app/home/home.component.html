@@ -45,33 +45,22 @@
     <div class="container mt-5">
     <h3>Latest Products</h3>
     <div class="card-group row">
-      <div class="card col-sm-4">
-        <img src="/assets/images/items/8.jpg" class="card-img-top" alt="...">
+      <div class="card col-sm-4" *ngFor="let product of products">
+        <img [src]="product.processedImg" alt="product-image">
         <div class="card-body">
-        <h5 class="card-title">Item 1</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <button class="btn btn-primary" type="button">Add to cart</button>
-        </div>
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <ng-container *ngIf="isClientLoggedIn" color="primary">
+          <button color="primary" mat-button routerLink="/customers/cart" routerLinkActive="active" class="text-blue" color="primary" (click)="addToCart(product.id)">
+            <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+            Add to Cart
+          </button>
+        </ng-container>
+                </div>
       </div>
-      <div class="card col-sm-4">
-        <img src="/assets/images/items/7.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Item 2</h5>
-        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-        <button class="btn btn-primary" type="button">Add to cart</button>
-        </div>
-      </div>
-      <div class="card col-sm-4">
-        <img src="/assets/images/items/6.jpg" class="card-img-top" alt="..." width="90%">
-        <div class="card-body">
-        <h5 class="card-title">Item 3</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-        <button class="btn btn-primary" type="button">Add to cart</button>
-        </div>
-      </div>
-      </div>
-    
     </div>
+    </div>
+    
   
     <div class="container-fluid mt-5" style="background-color: rgb(233, 18, 68);">
     <div class="container d-lg-flex justify-content-between align-items-center ps-lg-4">
@@ -80,9 +69,5 @@
       
       <img class="img-fluid" src="/assets/images/items/mac.png" width="150%">  </div>
     </div>
-    <div class="container-fluid bg-secondary p-3">
-      <div class="container">
-        <div class="fs-xs text-light opacity-50 text-center text-md-start">© All rights reserved. Made by <a class="text-light" href="https://therichpost.com/" target="_blank" rel="noopener">therichpost</a></div>
-      </div>
-    </div>
+
   
