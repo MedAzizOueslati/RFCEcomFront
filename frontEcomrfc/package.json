@@ -7,11 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "publish": "npm publish"
-  },
-    "repository": {
-    "type": "npm",
-    "url": "http://localhost:8081/npm-hosted"
+    "publish:nexus": "npm publish --registry http://localhost:8081/repository/npm-hosted/"
+
   },
   "private": true,
   "dependencies": {
