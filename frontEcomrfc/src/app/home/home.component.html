@@ -46,7 +46,7 @@
     <h3>Latest Products</h3>
     <div class="card-group row">
       <div class="card col-sm-4" *ngFor="let product of products">
-        <img [src]="product.processedImg" alt="product-image">
+        <img [src]="product.processedImg" alt="product">
         <div class="card-body">
         <h5 class="card-title">{{ product.name }}</h5>
         <p class="card-text">{{ product.description }}</p>
