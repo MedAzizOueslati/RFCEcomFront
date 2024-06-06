@@ -43,10 +43,13 @@ export class LoginComponent {
           this.router.navigateByUrl('customers/dashboard');
         
         }
-        (error) => {
-          
-          this.snackBar.open('Bad credentials', 'ERROR', { duration: 5000, panelClass: 'error-this.snackBar' });
+        error => {
+          this.snackBar.open('Bad credentials', 'ERROR', {
+            duration: 5000,
+            panelClass: 'error-this.snackBar'
+          });
         }
+        
       }
         );
     
