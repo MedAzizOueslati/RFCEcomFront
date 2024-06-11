@@ -1,6 +1,6 @@
 module.exports = function(config) {
     config.set({
-      // Other configurations
+      // Other configuration settings
       frameworks: ['jasmine', '@angular-devkit/build-angular'],
       plugins: [
         require('karma-jasmine'),
@@ -17,6 +17,12 @@ module.exports = function(config) {
       },
       reporters: ['progress', 'coverage', 'kjhtml'],
       browsers: ['ChromeHeadless'],
+      customLaunchers: {
+        ChromeHeadless: {
+          base: 'ChromeHeadless',
+          flags: ['--no-sandbox', '--disable-gpu']
+        }
+      },
       singleRun: true,
       restartOnFileChange: true
     });
