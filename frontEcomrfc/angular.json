@@ -94,6 +94,8 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
+            "codeCoverage": true,
+
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
@@ -111,7 +113,7 @@
   },
   "cli": {
     "analytics": "0bb0f6ba-0a59-4d0d-9dbb-d3336b06c953"
-  }
+  },
   "publishConfig": {
   "registry": "http://localhost:8081/repository/npm-group/"
 }
