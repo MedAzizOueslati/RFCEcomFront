@@ -14,7 +14,7 @@ ADD http://localhost:8081/repository/npm-hosted/front-ecomrfc/-/front-ecomrfc-0.
 RUN tar -xvzf front-ecomrfc-0.0.0.tgz --strip 1
 
 # Installer les dépendances et construire l'application Angular
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build --prod
 
 # Étape 2 : Servir l'application avec Nginx
