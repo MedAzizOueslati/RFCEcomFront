@@ -8,7 +8,7 @@ RUN npm install -g tar
 WORKDIR /app
 
 # Télécharger l'artefact depuis Nexus
-ADD http://localhost:8081/repository/npm-hosted/front-ecomrfc/front-ecomrfc-0.0.0.tgz /app/front-ecomrfc-0.0.0.tgz
+ADD http://localhost:8081/repository/npm-hosted/front-ecomrfc/-/front-ecomrfc-0.0.0.tgz /app/front-ecomrfc-0.0.0.tgz
 
 # Extraire l'artefact
 RUN tar -xvzf front-ecomrfc-0.0.0.tgz --strip 1
