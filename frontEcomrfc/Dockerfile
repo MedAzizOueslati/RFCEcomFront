@@ -1,5 +1,5 @@
 # Étape 1 : Télécharger et extraire l'artefact Angular depuis Nexus
-FROM node:16 AS builder
+FROM node:18.15.0 AS builder
 
 # Installer les dépendances nécessaires pour l'extraction
 RUN npm install -g tar
@@ -25,6 +25,10 @@ COPY --from=builder /app/dist/front-ecomrfc /usr/share/nginx/html
 
 # Exposer le port 80
 EXPOSE 80
+
+# Démarrer Nginx
+CMD ["nginx", "-g", "daemon off;"]
+
 
 # Démarrer Nginx
 CMD ["nginx", "-g", "daemon off;"]
