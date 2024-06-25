@@ -32,4 +32,4 @@
         source: local
         push: yes
       vars:
-        ansible_python_interpreter: /usr/bin/pytho
+        ansible_python_interpreter: /usr/bin/python3
