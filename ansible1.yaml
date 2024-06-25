@@ -23,6 +23,8 @@
         path: "{{ context_path }}"
         dockerfile: "{{ dockerfile_path }}"
         source: build
+      vars:
+        ansible_python_interpreter: /usr/bin/python3
 
 
     - name: Push the Docker image to ACR
@@ -30,4 +32,5 @@
         name: "{{ acr_login_server }}/{{ image_name }}:{{ image_tag }}"
         source: local
         push: yes
-
+      vars:
+        ansible_python_interpreter: /usr/bin/python3
