@@ -5,7 +5,7 @@
     acr_login_server: "{{ acr_name }}.azurecr.io"
     image_name: frontecom
     image_tag: latest
-    dockerfile_path: ./Dockerfile
+    dockerfile_path: ./frontEcomrfc
     context_path: ./app
     acr_username: "EcomRegistr"
     acr_password: "ydYcpFbaLyVmvcFBFxBxuTytQfTO/7Od7zXfEmW/eh+ACRBus9+4"
