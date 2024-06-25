@@ -12,7 +12,7 @@
   },
 
   "publishConfig": {
-    "registry": "http://10.0.0.4:8081/repository/npm-group/"},
+    "registry": "http://10.0.0.4:8081/repository/npm-hosted/"},
   "private": false,
   "dependencies": {
     "@angular/animations": "^15.2.0",
