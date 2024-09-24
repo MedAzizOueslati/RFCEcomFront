@@ -1,0 +1,59 @@
+.background {
+  background: url('/assets/images/ecom.jpg') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-color: #87CEEB; /* Couleur bleu ciel */
+  height: 100vh;
+}
+
+
+.container {
+  max-width: 600px;
+}
+
+.card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 28px;
+  color: #333;
+}
+
+.category-form {
+  margin-top: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #555;
+}
+
+.form-control {
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+
+.invalid-feedback {
+  color: #ff0000;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-block {
+  width: 100%;
+}

@@ -1,0 +1,38 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<div class="background">
+  <div class="center-container" *ngIf="product">
+    <div class="product-card">
+      <div class="card-image">
+        <img [src]="product.processedImg" alt="{{ product.name }} Image">
+      </div>
+      <div class="card-content">
+        <h2 class="card-title">{{ product.name }}</h2>
+        <p class="card-description">{{ product.description }}</p>
+        <div class="card-details">
+          <p class="card-price">Price: {{ product.price }}Dt</p>
+          <p class="card-category">Category: {{ product.categoryName }}</p>
+          <mat-icon class="heart-icon" (click)="addTowishlist()" aria-multiselectable="false">favorite_border</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="section-heading" *ngIf="reviews.length > 0">Customer Reviews</h1>
+  <div *ngIf="reviews.length > 0" class="review-list">
+    <div class="center-container">
+      <div *ngFor="let review of reviews" class="review-card">
+        <div class="card-image">
+          <img [src]="review.processedImg" alt="{{ review.description }} Image">
+        </div>
+        <div class="card-content">
+          <h2 class="card-title">{{ review.description }}</h2>
+          <div class="card-details">
+            <p class="card-rating">Rating: {{ review.rating }}</p>
+            <p class="card-username">Username: {{ review.username }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

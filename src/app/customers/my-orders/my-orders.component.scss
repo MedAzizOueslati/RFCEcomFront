@@ -1,0 +1,58 @@
+.background {
+    background: url('/assets/images/ecom.jpg') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-color: #87CEEB; /* Couleur bleu ciel */
+    height: 100vh;
+  }
+
+  
+  .mat-elevation-28 {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
+    padding: 12px 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .mat-header-cell {
+    font-weight: bold;
+    color: #003973;
+  }
+  
+  .mat-cell {
+    color: #333;
+  }
+  
+  .mat-header-row {
+    background-color: #e0e0e0;
+  }
+  
+  .mat-row:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .mat-row:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .mat-row,
+  .mat-header-row {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  button {
+    font-weight: bold;
+  }
+  
+  .mat-raised-button {
+    background-color: #2196f3;
+    color: #fff;
+  }
+  
+  .mat-raised-button:hover {
+    background-color: #0d47a1;
+  }
+  

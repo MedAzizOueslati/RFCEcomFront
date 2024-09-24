@@ -1,0 +1,78 @@
+.background {
+  background: url('/assets/images/ecom.jpg') center center fixed; /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+  background-size: cover;
+  background-color: #87CEEB; /* Couleur bleu ciel */
+  height: 225vh;
+}
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  width: calc(33.33% - 20px);
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-description {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.product-info,
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.info-label {
+  margin-right: 5px;
+  font-weight: bold;
+  color: #003973;
+}
+
+.info-value {
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.update-button,
+.delete-button {
+  min-width: 100px;
+}

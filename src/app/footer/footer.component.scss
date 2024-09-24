@@ -1,0 +1,57 @@
+// Footer container
+footer {
+    background-color: #343a40; // Dark background color
+    color: #fff; // Text color
+    padding: 40px 0; // Padding top and bottom
+  
+    // Contact information section
+    .contact-info {
+      margin-bottom: 30px; // Bottom margin
+  
+      h5 {
+        color: #f8f9fa; // Heading color
+        font-size: 20px; // Heading font size
+        margin-bottom: 15px; // Bottom margin
+      }
+  
+      p {
+        margin-bottom: 10px; // Bottom margin
+      }
+    }
+  
+    // Social media icons section
+    .social-icons {
+      margin-bottom: 30px; // Bottom margin
+  
+      a {
+        color: #fff; // Icon color
+        font-size: 24px; // Icon size
+        margin-right: 15px; // Right margin
+        transition: color 0.3s ease; // Smooth transition
+  
+        &:hover {
+          color: #ffc107; // Icon color on hover
+        }
+      }
+    }
+  *div{
+    font-family: cursive;
+  }
+  *h5{
+    font-family:monospace;
+  }
+    // Footer text
+    .footer-text {
+      font-size: 14px; // Text font size
+  
+      a {
+        color: #ffc107; // Link color
+        text-decoration: none; // Remove underline
+  
+        &:hover {
+          text-decoration: underline; // Add underline on hover
+        }
+      }
+    }
+  }
+  
